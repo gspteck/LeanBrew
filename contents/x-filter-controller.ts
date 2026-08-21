@@ -3,8 +3,8 @@ import { Storage } from "@plasmohq/storage";
 
 //import * as adFilter from "./x-filters/x-ad-filter";
 //import * as aiFilter from "./x-filters/x-aireply-filter";
-import * as oldPostFilter from "./x-filters/x-oldpost-filter";
-import * as oneLinerFilter from "./x-filters/x-oneliner-filter";
+//import * as oldPostFilter from "./x-filters/x-oldpost-filter";
+//import * as oneLinerFilter from "./x-filters/x-oneliner-filter";
 //import * as termFilter from "./x-filters/x-term-filter";
 
 const storage = new Storage();

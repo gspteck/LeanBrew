@@ -5,7 +5,9 @@
   "description": "Making media consumption clean.",
   "author": "Plasmo Corp. <foss@plasmo.com>",
   "scripts": {
-    "dev": "plasmo dev",
+    "dev:chrome": "plasmo dev --target=chrome",
+		"dev:firefox": "plasmo dev --target=firefox",
+		"dev:edge": "plasmo dev --target=edge",
     "build:chrome": "plasmo build --target=chrome-mv3",
     "build:firefox": "plasmo build --target=firefox-mv3",
     "build:edge": "plasmo build --target=edge-mv3",
@@ -15,7 +17,7 @@
     "@plasmohq/storage": "^1.15.0",
     "esbuild": "^0.25.1",
     "lmdb": "^3.2.6",
-    "plasmo": "0.90.3",
+    "plasmo": "^0.90.5",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "svelte": "^5.25.2",
@@ -30,9 +32,15 @@
     "prettier": "3.2.4",
     "typescript": "5.3.3"
   },
-  "manifest": {
-    "host_permissions": [
-      "https://*/*"
-    ]
-  }
+ 	"plasmo": {
+    "manifest": {
+      "permissions": ["storage"],
+      "host_permissions": ["https://twitter.com/*", "https://x.com/*"],
+      "browser_specific_settings": {
+        "gecko": {
+          "id": "leanbrew-extension@plasmo.org"
+        }
+      }
+    }
+  } 
 }
